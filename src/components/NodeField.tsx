@@ -13,7 +13,7 @@ export function NodeField({ className }: { className?: string }) {
     { x: 34, y: 86 },
     { x: 68, y: 90 },
   ];
-  const edges = [
+  const edges: Array<[number, number]> = [
     [0, 1],
     [1, 2],
     [2, 3],
@@ -37,10 +37,10 @@ export function NodeField({ className }: { className?: string }) {
         {edges.map(([a, b], i) => (
           <line
             key={i}
-            x1={nodes[a].x}
-            y1={nodes[a].y}
-            x2={nodes[b].x}
-            y2={nodes[b].y}
+            x1={nodes[a]!.x}
+            y1={nodes[a]!.y}
+            x2={nodes[b]!.x}
+            y2={nodes[b]!.y}
           />
         ))}
       </g>
