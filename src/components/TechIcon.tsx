@@ -1,7 +1,6 @@
 import {
   siAngular,
   siApachemaven,
-  siC,
   siCloudinary,
   siCss,
   siEclipseide,
@@ -26,6 +25,7 @@ import {
   BrainCircuit,
   Boxes,
   Database,
+  FileCode2,
   KeyRound,
   Lock,
   Network,
@@ -57,7 +57,6 @@ const brands: Record<string, SimpleIcon> = {
   postman: siPostman,
   maven: siApachemaven,
   "intellij idea": siIntellijidea,
-  "vs code": siC,
   eclipse: siEclipseide,
   cloudinary: siCloudinary,
   "opencv basics": siOpencv,
@@ -79,6 +78,7 @@ const fallbacks: Record<string, LucideIcon> = {
   "data structures & algorithms": Binary,
   "object-oriented programming": Boxes,
   "problem solving": Puzzle,
+  "vs code": FileCode2,
 };
 
 /** Brand-accurate colours that stay legible on a dark surface. */
@@ -87,7 +87,6 @@ const colorOverrides: Record<string, string> = {
   github: "#E6EDF3",
   angular: "#DD0031",
   "intellij idea": "#FE315D",
-  "vs code": "#0098FF",
   "jwt authentication": "#D63AFF",
   jwt: "#D63AFF",
 };
