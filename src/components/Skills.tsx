@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Section } from "@/components/Section";
 import { skillGroups } from "@/data/portfolio";
+import { TechIcon } from "@/components/TechIcon";
 
 const icons: Record<string, LucideIcon> = {
   Code2,
@@ -47,8 +48,9 @@ export function Skills() {
                 {group.items.map((item) => (
                   <li
                     key={item}
-                    className="rounded-md border border-border bg-surface px-2.5 py-1 font-mono text-xs text-muted-foreground"
+                    className="inline-flex items-center gap-2 rounded-md border border-border bg-surface px-2.5 py-1 font-mono text-xs text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
                   >
+                    <TechIcon name={item} />
                     {item}
                   </li>
                 ))}
