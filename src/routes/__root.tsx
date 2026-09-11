@@ -77,11 +77,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Swetha S — Java Full-Stack & AI Developer" },
+      {
+        name: "description",
+        content:
+          "Portfolio of Swetha S — Java Spring Boot backends, REST APIs, AI/ML and automation.",
+      },
+      { name: "author", content: "Swetha S" },
+      { property: "og:title", content: "Swetha S — Java Full-Stack & AI Developer" },
+      {
+        property: "og:description",
+        content:
+          "Portfolio of Swetha S — Java Spring Boot backends, REST APIs, AI/ML and automation.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
