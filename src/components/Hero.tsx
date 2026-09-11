@@ -53,13 +53,13 @@ export function Hero() {
 
         <div className="relative mx-auto w-full max-w-sm lg:mx-0">
           <NodeField className="absolute -inset-10 h-[calc(100%+5rem)] w-[calc(100%+5rem)] opacity-70" />
-          <div className="relative rounded-[2rem] border border-primary/30 bg-card/60 p-3 backdrop-blur-sm glow-ring">
+          <div className="relative mx-auto aspect-square w-full max-w-[22rem] rounded-full border border-primary/30 bg-card/60 p-3 backdrop-blur-sm glow-ring">
             <img
               src={profileImg}
               alt="Swetha S — Software Developer"
               width={1080}
               height={1440}
-              className="aspect-[4/5] w-full rounded-[1.6rem] object-cover object-top"
+              className="h-full w-full rounded-full object-cover object-top"
             />
           </div>
           <div className="mt-4 flex justify-center gap-2 font-mono text-[11px] text-muted-foreground">
