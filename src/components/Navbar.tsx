@@ -31,7 +31,7 @@ export function Navbar() {
       )}
     >
       <nav className="mx-auto grid w-full max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 sm:px-8">
-        <a href="#home" className="min-w-0 truncate font-display text-sm font-bold tracking-[0.25em]">
+        <a href="#home" className="shrink-0 whitespace-nowrap font-display text-sm font-bold tracking-[0.25em]">
           SWETHA<span className="text-cyan"> S</span>
         </a>
 
