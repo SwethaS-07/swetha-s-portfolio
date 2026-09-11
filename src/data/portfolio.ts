@@ -316,7 +316,7 @@ export const education = [
   {
     title: "B.E. Computer Science Engineering",
     org: "Jerusalem College of Engineering",
-    meta: "March 2026 · CGPA 8.50",
+    meta: "March 2026 · CGPA 8.66",
   },
 ];
 
