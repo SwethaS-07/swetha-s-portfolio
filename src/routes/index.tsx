@@ -8,6 +8,7 @@ import { Projects } from "@/components/Projects";
 import { AiAutomation } from "@/components/AiAutomation";
 import { Achievements } from "@/components/Achievements";
 import { Education } from "@/components/Education";
+import { Certifications } from "@/components/Certifications";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
@@ -42,6 +43,7 @@ function Index() {
         <AiAutomation />
         <Achievements />
         <Education />
+        <Certifications />
         <Contact />
       </main>
       <Footer />
