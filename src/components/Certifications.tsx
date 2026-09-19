@@ -78,7 +78,7 @@ export function Certifications() {
               </div>
             </div>
           </article>
-        })}
+        ))}
       </div>
     </Section>
   );
