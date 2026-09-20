@@ -324,3 +324,45 @@ export const certifications = [
   "TCS iON National Qualifier Test (NQT)",
   "HackerRank Java (Basic)",
 ];
+
+export type CertificationCard = {
+  title: string;
+  issuer: string;
+  issued?: string;
+  credentialId?: string;
+  /** Public path to the certificate image; omit to show a styled placeholder. */
+  image?: string;
+  /** Issuer verification URL; the Verify button is hidden when absent. */
+  verifyUrl?: string;
+  /** Lucide icon name shown on the placeholder panel. */
+  icon?: string;
+  /** Supporting result lines shown instead of the issued/ID row. */
+  detail?: string[];
+};
+
+export const certificationCards: CertificationCard[] = [
+  {
+    title: "Python Programming Zero to Hero: Complete Python Bootcamp",
+    issuer: "GUVI Geek Networks / HCL",
+    issued: "September 14, 2026",
+    credentialId: "495I7g583wC3KuqOp",
+    image: "/Certificate/HCL%20GUVI%20Certification%20-%20Python.png",
+    verifyUrl: "https://www.guvi.in/certificate?id=495I7g583wC3KuqOp",
+    icon: "BadgeCheck",
+  },
+  {
+    title: "TCS iON National Qualifier Test (NQT)",
+    issuer: "TCS iON",
+    icon: "Award",
+    detail: [
+      "Overall — 69.02%",
+      "Java — 72.52%",
+      "Advanced Quantitative & Reasoning — 77.69%",
+    ],
+  },
+  {
+    title: "HackerRank Java (Basic)",
+    issuer: "HackerRank",
+    icon: "CodeXml",
+  },
+];
