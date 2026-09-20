@@ -18,7 +18,7 @@ const ICONS: Record<string, LucideIcon> = {
   CodeXml,
 };
 
-function PlaceholderIcon({ name }: { name?: string }) {
+function PlaceholderIcon({ name }: { name?: string | undefined }) {
   const Icon = (name && ICONS[name]) || ShieldCheck;
   return <Icon className="h-10 w-10 text-cyan" aria-hidden="true" />;
 }
