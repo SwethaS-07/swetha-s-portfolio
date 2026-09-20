@@ -1,4 +1,4 @@
-import { BadgeCheck, ExternalLink, ShieldCheck } from "lucide-react";
+import { Download, ExternalLink, BadgeCheck, ShieldCheck } from "lucide-react";
 import { Section } from "@/components/Section";
 
 const CERTIFICATE_IMAGE = "/Certificate/HCL%20GUVI%20Certification%20-%20Python.png";
@@ -14,6 +14,8 @@ const certifications = [
     verifyUrl: VERIFY_URL,
   },
 ];
+
+const NEW_TAB_HINT = "opens in a new tab";
 
 export function Certifications() {
   return (
@@ -33,11 +35,12 @@ export function Certifications() {
               href={c.image}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative block overflow-hidden border-b border-border"
+              aria-label={`Open the ${c.title} certificate image in a new tab`}
+              className="relative block overflow-hidden border-b border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               <img
                 src={c.image}
-                alt={`${c.title} certificate issued by ${c.issuer}`}
+                alt={`Certificate image: ${c.title}, issued by ${c.issuer} on ${c.issued}, credential ID ${c.credentialId}. Select to open the full certificate in a new tab.`}
                 loading="lazy"
                 className="aspect-[16/9] w-full object-cover object-top opacity-90 transition duration-300 group-hover:opacity-100"
               />
@@ -59,21 +62,35 @@ export function Certifications() {
               <div className="mt-5 flex flex-wrap gap-3">
                 <a
                   href={c.image}
+                  download
+                  aria-label={`Download the ${c.title} certificate image (PNG)`}
+                  className="inline-flex items-center gap-2 rounded-lg border border-primary/40 bg-primary/10 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-primary/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                >
+                  <Download className="h-4 w-4 text-cyan" />
+                  Download Certificate
+                </a>
+                <a
+                  href={c.image}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-primary/40 bg-primary/10 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-primary/20"
+                  aria-label={`View the ${c.title} certificate image (opens in a new tab)`}
+                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   <ExternalLink className="h-4 w-4 text-cyan" />
                   View Certificate
+                  <span className="sr-only">({NEW_TAB_HINT})</span>
                 </a>
                 <a
                   href={c.verifyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-primary/40"
+                  aria-label={`Verify the ${c.title} certificate on the GUVI website (opens in a new tab)`}
+                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   <ShieldCheck className="h-4 w-4 text-cyan" />
                   Verify Certificate
+                  <ExternalLink className="h-3 w-3 text-muted-foreground" aria-hidden="true" />
+                  <span className="sr-only">({NEW_TAB_HINT})</span>
                 </a>
               </div>
             </div>
